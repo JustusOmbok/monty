@@ -74,3 +74,33 @@ void rotr(stack_t **stack, unsigned int line_number)
 		*stack = last;
 	}
 }
+
+/**
+ * nop - nothing is done
+ * @stack: not use
+ * @line_number: not used
+ */
+
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)*stack;
+	(void)line_number;
+}
+
+/**
+ * add - top two elements are added
+ * @stack: start of list
+ * @line_number: line no
+ */
+
+void add(stack_t **stack, unsigned int line_number)
+{
+	if (!(*stack) || !(*stack)->next)
+	{
+		free_stack(*stack);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_n);
+		exit(EXIT_FAILURE);
+	}
+	(*stack)->next->n += (*stack)->n;
+	pop(stack, line_n);
+}
