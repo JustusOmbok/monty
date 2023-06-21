@@ -78,6 +78,7 @@ void (*get_op_func(char *s))(stack_t **stack, unsigned int line_n)
 		{"add", add},
 		{"sub", sub},
 		{"div", _div},
+		{"stack", queue},
 		{"pchar", pchar},
 		{"rotl", rotl},
 		{"mod", mod},
