@@ -68,7 +68,7 @@ void exec_loop(buf_struct *a)
  * Return: func's pointer
  */
 
-void (*get_op_func(char *s))(stack_t **stack, unsigned int line_number)
+void (*get_op_func(char *s))(stack_t **stack, unsigned int line_n)
 {
 	instruction_t cmd[] = {
 		{"pall", pall},
@@ -78,7 +78,6 @@ void (*get_op_func(char *s))(stack_t **stack, unsigned int line_number)
 		{"add", add},
 		{"sub", sub},
 		{"div", _div},
-		{"stack", stack},
 		{"pchar", pchar},
 		{"rotl", rotl},
 		{"mod", mod},
